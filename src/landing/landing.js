@@ -5,13 +5,14 @@ import { inject } from 'aurelia-framework';
 export class Landing {
   constructor(GISService) {
     this.gisService = GISService;
-    this.message = ""
+    this.message = "123"
     console.log(this.message)
   }
 
   async attached() {
-    this.fileType = await this.gisService.getFileType();
-    this.message = this.fileType.shapeType;
+    const communities = await this.gisService.getData("community");
+    this.message = communities.Community[0].name
+    console.log(communities)
   }
 
   

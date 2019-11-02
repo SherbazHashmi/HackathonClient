@@ -5,12 +5,13 @@ import { EventAggregator } from 'aurelia-event-aggregator';
 export class GISService {
   constructor(EventAggregator) {
     this.client = new HttpClient();
-    this.host = 'http://127.0.0.1:5000/'
+    this.host = 'http://192.168.137.1:5000/'
   }
 
-  getFileType () {
+  getData (dataType) {
+      console.log(`${this.host}${dataType}`)
       this.isRequesting = true;
-      return this.client.fetch(`http://localhost:5000`, {
+      return this.client.fetch(`${this.host}data/${dataType}`, {
         method: 'get',
         headers: {
         }

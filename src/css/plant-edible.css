@@ -39,20 +39,21 @@ body {
   align-items: flex-end;
 }
 
-.scroll_list {
+div.scroll_list {
   color: black;
-  height: 98%;
+  height: 100%;
   background-color: white;
-  width: 98%;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
+  overflow: auto;
+  width: 100%;
+  overflow: auto;  
 }
 
 .buttons{
   display: flex;
   justify-content: space-around;
   flex-direction: row;
+  width: 100%; 
+  background-color: white;
 }
 
 .button {
@@ -65,6 +66,25 @@ body {
   display: inline-block;
   font-size: 16px;
 }
+
+.mocked_edible_plant{
+  color: black;
+  height: 40%;
+  background-color: rgb(23, 131, 219);
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.buttons_container {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+
+
 
 
 

@@ -1,66 +1,28 @@
 <template>
-  <div class="column">
-    <div class="map_block">
-      <div class="map">
-        ${message}
-      </div>
-
-      <div class="map_row">
-        <div class="row_col" click.delegate="onClickRow(this)">
-
-        </div>
-
-        <div class="row_col" click.delegate="onClickRow(this)">
-          
-        </div>
-
-        <div class="row_col" click.delegate="onClickRow(this)">
-          
-        </div>
-
-        <div class="row_col" click.delegate="onClickRow(this)">
-          
-        </div>
-
-      </div>
+    <require from="../css/landing.css"></require>
+    <div class="column">
+  <div class="row title">Explore</div>
+  <div class="row community">
+    <div class="label">Select Your Community</div>
+    <select value.bind="selectedCommunity">
+      <option model.bind="null">Community...</option>
+      <option repeat.for="community of communities" model.bind="community">${community.name}</option>
+    </select>
+  </div>
+  
+  <div class="row explore">
+    <div class="split wide">
+      <button class="narrow">Plants</button>
+      <button class="narrow">Water</button>
     </div>
 
-    <div class="social_feed">
-      <div class="social_feed_plus">
-
-      </div>
-
-      <div class="social_feed_feed">
-        <div class="social_feed_feed_cell">
-
-        </div>
-
-        <div class="social_feed_feed_cell">
-          
-        </div>
-
-        <div class="social_feed_feed_cell">
-          
-        </div>
-
-        <div class="social_feed_feed_cell">
-          
-        </div>
-      </div>
+    <div class="wide">
+      <button class="wide">Dreamtime</button>
     </div>
 
-    <div class="change_bar">
-      <div class="change_bar_1">
-
-      </div>
-
-      <div class="change_bar_2">
-        
-      </div>
-      
-      <div class="change_bar_3">
-
-      </div>
+    <div class="wide">
+      <button class = "wide">Learn More</button>
     </div>
   </div>
+  </div>  
 </template>

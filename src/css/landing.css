@@ -1,0 +1,41 @@
+body {
+  background-image:    url(../images/bg.png);
+  background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center;    
+  background-color: black;
+  height: 100vh;
+
+}
+.column {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+
+  grid-template-columns: [row] (auto, min-content);
+
+  grid-template-rows: 
+    [title] 30vh
+    [community] 30vh
+    [explore] 40vh;
+
+}
+button {
+  background-color: white;
+  border-radius: 10px;
+  padding: 2%;
+}
+
+.wide {
+  width: 100%;
+}
+
+.narrow {
+  width: 40%;
+}
+
+select {
+  background-color: white;
+  width: 80%;
+  height: 20%;
+}

@@ -81,7 +81,6 @@ attached() {
     const index = parseInt(element['id']) - 1;
     console.log(index);
     console.log("here");
-    this.router.navigate('#/plant/describe');
     
   }
 }

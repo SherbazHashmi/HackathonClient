@@ -18,12 +18,12 @@
   </div>
   
   <div class="row explore">
-    <div class="buttons">
+    <div class="buttons" if.bind="selectedCommunity">
         <div class="wide text">
           Explore Your Community
         </div>
         <div class="split wide">
-            <button class="narrow">Plants</button>
+            <button class="narrow" click.delegate="navigatePlants()">Plants</button>
             <button class="narrow">Water</button>
           </div>
       
@@ -32,7 +32,7 @@
           </div>
       
           <div class="wide one">
-            <button class = "wide">Learn More</button>
+            <button class = "wide" click.delegate="navigateGeneral()">Learn More</button>
           </div>
     </div>
   </div>

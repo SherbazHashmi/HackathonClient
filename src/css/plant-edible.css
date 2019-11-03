@@ -103,10 +103,23 @@ div.scroll_list {
 .buttons_container {
   position: absolute;
   width: 100%;
-  height: 17%;
   bottom: 0;
 }
 
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+}
+
+.b {
+  background-color: blue;
+}
 
 
 

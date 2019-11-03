@@ -2,7 +2,7 @@ import $ from 'jquery';
 
 export class DescribeArea {
   constructor() {
-    this.currentMapName = "Basemap"
+    this.currentMapName = "Endangered Species Map"
     this.currentDescription = "The basemap shows the boundaries within the area relative to the rest of Australia. "
        // Parks with Native Title
     // Edible Heat Map
@@ -11,22 +11,24 @@ export class DescribeArea {
     
     this.maps = [
       { 
-        name : "Basemap",
-        id: "",
-        description: "The basemap shows the boundaries within the area relative to the rest of Australia."
+        name : "Critically Endangered Species Map",
+        id: "e9991cfbcdbf4394806e60994bb390f9",
+        description: "The Endangered Species map includes a subset of the Critically Endangered Ecological Communities that exist within NSW. A 300m buffer has been applied to each of these locations, as recommendations for enhanced preservation."
       },
       {
-        name : "Edible Heat Map",
+        name : "Edible Heatmap",
         id: "c530e2143df04cbdaf8a70e93d3b3118",
-        description: "This map shows the distribution and density of the edible species species of plants within the region of New South Wales. As is evident from the map."
+        description: "The Edible Plants map shows the distribution of different edible species, and where they are found in abundance using a 'heat map' scale."
       },
       {
         name : "Vegetation Map",
-        id: "e9991cfbcdbf4394806e60994bb390f9"
+        id: "f1630fd726654f2dbd7586fdcde3dbbb",
+        description: "The Vegetation Classifications map illustrates the diverse range of ecosystems that exist within NSW. The legends are subdivided by area to accommodate this variation."
       },
       {
         name : "Parks with Native Title",
-        id: "693af5d5baec4ee98e17c4993b9e7da5"
+        id: "693af5d5baec4ee98e17c4993b9e7da5",
+        description: "The Native Title and NPWS map identifies areas that are listed with the Commonwealth Government as Active Native Title Claims, and areas dedicated to Conservation, e.g. National Parks."
       },
     ]
   }
@@ -68,9 +70,9 @@ export class DescribeArea {
           require(["esri/views/MapView", "esri/WebMap"], function(MapView, WebMap) {
 
             window.mapids = [
-              "",
-              "c530e2143df04cbdaf8a70e93d3b3118",
               "e9991cfbcdbf4394806e60994bb390f9",
+              "c530e2143df04cbdaf8a70e93d3b3118",
+              "f1630fd726654f2dbd7586fdcde3dbbb",
               "693af5d5baec4ee98e17c4993b9e7da5"
             ]
 

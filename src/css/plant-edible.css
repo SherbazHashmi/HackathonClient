@@ -32,11 +32,28 @@ body {
   flex-direction: column;
 }
 
+.mocked_edible_plant_test {
+  color: black;
+  height: 30%;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
 
 .row_title {
+  height: 20%;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  flex-direction: column;
+}
+
+.title {
+  color: white;
+  font-size: 45px;
+  margin-top: 20px;
+  margin-left: 10px;
+  height: 20%;
 }
 
 div.scroll_list {
@@ -56,9 +73,15 @@ div.scroll_list {
   background-color: white;
 }
 
+.switch {
+  color: white;
+  width: 25%;
+  height: 50px;
+}
+
 .button {
-  background-color: #006b1b; /* Green */
-  border: none;
+  background-color:white; /* Green */
+  border: 10px;
   color: white;
   padding: 15px 32px;
   text-align: center;
@@ -80,6 +103,7 @@ div.scroll_list {
 .buttons_container {
   position: absolute;
   width: 100%;
+  height: 17%;
   bottom: 0;
 }
 

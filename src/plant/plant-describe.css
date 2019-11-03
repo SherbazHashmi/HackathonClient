@@ -7,8 +7,7 @@
 body {
   margin: 0px;
   font-family: 'Open Sans', 'sans-serif';
-  background-color: #fff;
-  color: #444;
+
 }
 
 h1, p {
@@ -17,8 +16,9 @@ h1, p {
 }
 
 .content {
-  float: right;
-  background-color: aliceblue
+  display: flex;
+  justify-content: center;
+ 
 }
 
 /* make a grid */
@@ -30,13 +30,13 @@ h1, p {
   grid-template-columns: [row] (auto, min-content);
 
   grid-template-rows: 
-    [header] 30vh
-    [content] 20vh
-    [footer] 50vh;
+    [header] 40vh
+    [title] 10vh
+    [content] 50vh;
 }
 
 .wrapper > * {
-  background-color: #444;
+  
   color: #fff;
   border-radius: 2px;
   padding: 0px;
@@ -45,9 +45,7 @@ h1, p {
   margin-bottom: 10px;
 }
 
-.header {
-  background: white;
-}
+
 
 .header>img {
   object-fit: cover;
@@ -58,14 +56,40 @@ h1, p {
 .footer{
   /* needed for the floated layout */
   clear: both;
-  background-color: #444
+ 
 }
 
+.title {
+  width: 90%;
+}
+.row_title {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
 
+.container {
+  color: black;
+  height: 95%;
+  background-color: white;
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
 /* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
 @supports (display: grid) {
   .wrapper > * {
     width: auto;
     margin: 0;
   }
+}
+
+.key {
+  font-weight: bolder;
+  margin-left: 5px;
+}
+.val  {
+  margin-left: 15px;
+  color: rgb(0, 0, 0);
 }

@@ -1,26 +1,31 @@
 <template>
+<require from="../css/base.css"></require>
 <require from="./plant-describe.css"></require>
 <div class="wrapper">
   <div class="header">
-      <img src=".\bush.png"/>
+      <img src="../images/bush.png"/>
   </div>
   
-  <div class="content">
-      <h1 align="center">demo name</h1>
+  <div class="row_title">
+      <div class="title">${targetedPlant.name}</div>
   </div>
 
-  <div class="footer">
-      <table style="width:100%">
-          <tr>
-            <th>distribution and occurrence</th>
-          </tr>
-          <tr>
-            <th>flowering</th>
-          </tr>
-          <tr>
-            <th>synonyms</th>
-          </tr>
-        </table>
+  <div class="content">
+      <div class="container">
+        
+        <div class="container_row">
+          <div class="key">Distribution and Occurence</div>
+          <div class="val">${targetedPlant['distribution and occurrence']}</div>
+        </div>
+        <div class="container_row">
+            <div class="key">Flowering</div>
+            <div class="val">${targetedPlant['flowering']}</div>
+        </div>
+        <div class="container_row">
+            <div class="key">Synonyms</div>
+            <div class="val">${targetedPlant.synonyms}</div>
+        </div>
+      </div>
   </div>
 </div>
  

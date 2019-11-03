@@ -3,18 +3,19 @@ import { inject } from 'aurelia-framework';
 
 @inject(GISService)
 export class PlantDescribe {
-  targetedPlant = null;
   constructor(GISService) {
     this.gisService = GISService;
     this.message = "123"
-    this.plants = [];
     console.log(this.message)
+    this.targetedPlant = null;
   }
 
   attached() {
     this.gisService.getData("plants").then((plants) => {
-      this.plants = plants.Plants;
-      console.log(plants.Plants)
+      const recievedPlants = plants.Plants;
+      this.targetedPlant = recievedPlants[0];
+      window.plant = this.targetedPlant;
+      console.log(this.targetedPlant);
     }, reason => {
       console.log(reason);
     });

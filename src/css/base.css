@@ -1,0 +1,9 @@
+body {
+  background-image:    url(../images/bg.png);
+  background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center;    
+  background-color: black;
+  height: 100vh;
+
+}

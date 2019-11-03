@@ -12,55 +12,61 @@ export class DescribeArea {
 
     scriptElement.src = scriptURL;
 
+    this.scriptElementInHead = document.querySelector('head').appendChild(scriptElement);
+
     scriptElement.onload = () => {
       console.log("LOADED")
-      $('head').append(`
-    
-    <style>
-      html,
-      body,
-      #viewDiv {
-        padding: 0;
-        margin: 0;
-        height: 100%;
-        width: 100%;
-      }
-    </style>
-
-    <link
-      rel="stylesheet"
-      href="https://js.arcgis.com/4.13/esri/themes/light/main.css"
+      $('head').append(` 
+      <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
     />
-
-    <script>
-      require(["esri/views/MapView", "esri/WebMap"], function(MapView, WebMap) {
-        /************************************************************
-         * Creates a new WebMap instance. A WebMap must reference
-         * a PortalItem ID that represents a WebMap saved to
-         * arcgis.com or an on-premise portal.
-         *
-         * To load a WebMap from an on-premise portal, set the portal
-         * url with esriConfig.portalUrl.
-         ************************************************************/
-        var webmap = new WebMap({
-          portalItem: {
-            // autocasts as new PortalItem()
-            id: "f2e9b762544945f390ca4ac3671cfa72"
+        <style>
+          html,
+          body,
+          #viewDiv {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
           }
-        });
+        </style>
 
-        /************************************************************
-         * Set the WebMap instance to the map property in a MapView.
-         ************************************************************/
-        var view = new MapView({
-          map: webmap,
-          container: "viewDiv"
-        });
-      });
-    </script>
-    `)
-    }
-    console.log('hi')
-    
+        <link
+          rel="stylesheet"
+          href="https://js.arcgis.com/4.13/esri/themes/light/main.css"
+        />
+
+        <script>
+          require(["esri/views/MapView", "esri/WebMap"], function(MapView, WebMap) {
+            /************************************************************
+             * Creates a new WebMap instance. A WebMap must reference
+             * a PortalItem ID that represents a WebMap saved to
+             * arcgis.com or an on-premise portal.
+             *
+             * To load a WebMap from an on-premise portal, set the portal
+             * url with esriConfig.portalUrl.
+             ************************************************************/
+            var webmap = new WebMap({
+              portalItem: {
+                // autocasts as new PortalItem()
+                id: "c530e2143df04cbdaf8a70e93d3b3118"
+              }
+            });
+
+            /************************************************************
+             * Set the WebMap instance to the map property in a MapView.
+             ************************************************************/
+            var view = new MapView({
+              map: webmap,
+              container: "map_view"
+            });
+          });
+        </script>
+        `
+    )
+    console.log("LOADED 2")
+    }    
   }
 }

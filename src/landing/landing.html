@@ -1,27 +1,38 @@
 <template>
     <require from="../css/landing.css"></require>
     <div class="column">
-  <div class="row title">Explore</div>
+  <div class="row title">
+    <div class="wide text" style="color: black; font-size: 50px; ">Explore</div>
+  </div>
   <div class="row community">
-    <div class="label">Select Your Community</div>
-    <select value.bind="selectedCommunity">
-      <option model.bind="null">Community...</option>
-      <option repeat.for="community of communities" model.bind="community">${community.name}</option>
-    </select>
+      <div class="wide text">
+          Select Your Community
+        </div>
+    <div class="wide one">
+        <select value.bind="selectedCommunity">
+            <option model.bind="null">Community...</option>
+            <option repeat.for="community of communities" model.bind="community">${community.name}</option>
+          </select>
+    </div>  
   </div>
   
   <div class="row explore">
-    <div class="split wide">
-      <button class="narrow">Plants</button>
-      <button class="narrow">Water</button>
-    </div>
-
-    <div class="wide">
-      <button class="wide">Dreamtime</button>
-    </div>
-
-    <div class="wide">
-      <button class = "wide">Learn More</button>
+    <div class="buttons">
+        <div class="wide text">
+          Explore Your Community
+        </div>
+        <div class="split wide">
+            <button class="narrow">Plants</button>
+            <button class="narrow">Water</button>
+          </div>
+      
+          <div class="wide one">
+            <button class="wide">Dreamtime</button>
+          </div>
+      
+          <div class="wide one">
+            <button class = "wide">Learn More</button>
+          </div>
     </div>
   </div>
   </div>  

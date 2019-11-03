@@ -1,3 +1,6 @@
+html, body{
+  margin: 0;
+}
 body {
   background-image:    url(../images/bg.png);
   background-size:     cover;                      /* <------ */
@@ -15,8 +18,8 @@ body {
   grid-template-columns: [row] (auto, min-content);
 
   grid-template-rows: 
-    [title] 30vh
-    [community] 30vh
+    [title] 40vh
+    [community] 20vh
     [explore] 40vh;
 
 }
@@ -27,7 +30,7 @@ button {
 }
 
 .wide {
-  width: 100%;
+  width: 90%;
 }
 
 .narrow {
@@ -37,5 +40,58 @@ button {
 select {
   background-color: white;
   width: 80%;
-  height: 20%;
+  height: 40px;
+ 
+}
+
+.title {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.row {
+  width: 100%;
+  margin: 0;
+}
+
+.community {
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+
+.explore {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 50%;
+}
+
+.split {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.one {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.text {
+  margin-left: 10%;
+  color : white;
+  font-size: x-large;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }

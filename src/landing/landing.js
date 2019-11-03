@@ -15,6 +15,9 @@ export class Landing {
     this.gisService.getData("community").then((communities) => {
       this.communities = communities.Community;
       console.log(communities.Community)
+      this.communities[0] = { 
+        name:  "Awabakal, Worimi"
+      }
     }, reason => {
       console.log(reason);
     });

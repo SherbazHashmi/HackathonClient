@@ -6,13 +6,14 @@
   </div>
   <div class="row community">
       <div class="wide text">
-          Select Your Community
+          Select Your Nation(s)
         </div>
     <div class="wide one">
         <select value.bind="selectedCommunity">
-            <option model.bind="null">Community...</option>
+            <option model.bind="null">Indigenous Areas...</option>
             <option repeat.for="community of communities" model.bind="community">${community.name}</option>
           </select>
+          
     </div>  
   </div>
   

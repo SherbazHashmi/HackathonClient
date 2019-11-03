@@ -6,23 +6,25 @@
 
         </div>
         <div class="map_buttons">
-          <div id="switch1" class="switch"></div>
-          <div id="switch2" class="switch"></div>
-          <div id="switch3" class="switch"></div>
-          <div id="switch4" class="switch"></div>
+          <div id="1" class="switch" click.delegate="triggerMapSwitch($event.target)"></div>
+          <div id="2" class="switch" click.delegate="triggerMapSwitch($event.target)"></div>
+          <div id="3" class="switch" click.delegate="triggerMapSwitch($event.target)"></div>
+          <div id="4" class="switch" click.delegate="triggerMapSwitch($event.target)"></div>
         </div>
 
       </div>
       <div class="row describe">
         <div class="title_container">
             <div class="title">
-                Area Name
+                ${currentMapName}
               </div>
         </div>
 
         <div class="description">
           <div class="container">
-
+            <div class="container_text">
+                ${currentDescription}
+            </div>
           </div>
         </div>
       </div>

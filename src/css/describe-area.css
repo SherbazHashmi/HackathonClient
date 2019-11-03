@@ -1,0 +1,67 @@
+.column {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  grid-template-columns: [row] (auto, min-content);
+
+  grid-template-rows: 
+    [map] 40vh
+    [describe] 60vh
+}
+
+
+.title_container {
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+}
+.title {
+  color: white;
+  font-size: 45px;
+  margin-top: 20px;
+  margin-left: 10px;
+  height: 20%;
+}
+
+.description {
+  height: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.switch {
+  color: white;
+  width: 25%;
+  height: 50px;
+}
+
+.map {
+  display: flex;
+  flex-direction: column;
+}
+
+.map_view {
+  height: 80%;
+  background-color: black;
+}
+.map_buttons {
+  display: flex;
+  flex-direction: row;
+  height: 20%;
+  background: white;
+}
+
+.switch {
+  border: black;
+  border-style: groove;
+  border-width: 1px;
+  height: 100%;
+}
+
+
+.container {
+  background-color: white;
+  width: 92%;
+  height: 96%;
+}
